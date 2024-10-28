@@ -20,7 +20,7 @@ public class PlayerCharacter : Character
         playerHUD.SetScoreMultiplierText(scoreMultiplier);
     }
 
-    public void AddScore(int amount, bool useMultiplier)
+    public void AddScore(int amount, bool useMultiplier = true)
     {
         int multiplier = useMultiplier ? scoreMultiplier : 1;
         score += amount * multiplier;
