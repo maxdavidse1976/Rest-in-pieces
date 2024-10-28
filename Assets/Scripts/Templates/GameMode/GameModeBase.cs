@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameModeBase : GameMode
+public class GameModeBase<T> : GameMode<T> where T : MonoBehaviour
 {
     public override bool GetIsGamePaused()
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class GameMode : Singleton<GameMode>
+public abstract class GameMode<T> : Singleton<T> where T : MonoBehaviour
 {
     [SerializeField] protected GameObject playerPrefab;
     [SerializeField] protected List<PlayerCharacter> spawnedPlayers;
