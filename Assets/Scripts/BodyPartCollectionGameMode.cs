@@ -5,6 +5,11 @@ public class BodyPartCollectionGameMode : GameModeBase<BodyPartCollectionGameMod
 {
     private float timeLeftInTheGame;
 
+    private void Start()
+    {
+        StartGame();
+    }
+
     public float GetTimeLeftInGame()
     {
         return timeLeftInTheGame;
