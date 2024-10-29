@@ -19,6 +19,6 @@ public class PlayerHUD : MonoBehaviour
 
     public void SetScoreMultiplierText(int scoreMultiplier)
     {
-        scoreMultiplierText.text = scoreMultiplier.ToString();
+        scoreMultiplierText.text = $"{scoreMultiplier}x";
     }
 }
