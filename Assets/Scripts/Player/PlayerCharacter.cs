@@ -21,7 +21,8 @@ public class PlayerCharacter : Character
 
     public void AddScore(int amount, bool useMultiplier = true)
     {
-        int multiplier = useMultiplier ? _scoreMultiplier : 1;
+        int multiplier = useMultiplier ?  Mathf.Max(_scoreMultiplier, 1) : 1;
+        
         _score += amount * multiplier;
         _playerHUD.SetScoreText(_score);
     }
@@ -34,7 +35,7 @@ public class PlayerCharacter : Character
 
     public void ResetScoreMultiplier()
     {
-        _scoreMultiplier = 0;
+        _scoreMultiplier = 1;
         _playerHUD.SetScoreMultiplierText(_scoreMultiplier);
     }
 }
