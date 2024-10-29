@@ -1,41 +1,40 @@
-using System;
 using UnityEngine;
 
 public class PlayerCharacter : Character
 {
-    [SerializeField] private PlayerHUD playerHUD;
-    [SerializeField] private int score;
-    [SerializeField] private float timeLeft;
-    [SerializeField] private int scoreMultiplier;
+    [SerializeField] PlayerHUD _playerHUD;
+    [SerializeField] int _score;
+    [SerializeField] float _timeLeft;
+    [SerializeField] int _scoreMultiplier;
 
-    private void Start()
+    void Start()
     {
         SetupCharacter();
     }
 
     protected override void SetupCharacter()
     {
-        playerHUD.SetScoreText(score);
-        playerHUD.SetTimeLeftText(timeLeft);
-        playerHUD.SetScoreMultiplierText(scoreMultiplier);
+        _playerHUD.SetScoreText(_score);
+        _playerHUD.SetTimeLeftText(_timeLeft);
+        _playerHUD.SetScoreMultiplierText(_scoreMultiplier);
     }
 
     public void AddScore(int amount, bool useMultiplier = true)
     {
-        int multiplier = useMultiplier ? scoreMultiplier : 1;
-        score += amount * multiplier;
-        playerHUD.SetScoreText(score);
+        int multiplier = useMultiplier ? _scoreMultiplier : 1;
+        _score += amount * multiplier;
+        _playerHUD.SetScoreText(_score);
     }
 
     public void AddScoreMultiplier(int amount)
     {
-        scoreMultiplier += amount;
-        playerHUD.SetScoreMultiplierText(scoreMultiplier);
+        _scoreMultiplier += amount;
+        _playerHUD.SetScoreMultiplierText(_scoreMultiplier);
     }
 
     public void ResetScoreMultiplier()
     {
-        scoreMultiplier = 0;
-        playerHUD.SetScoreMultiplierText(scoreMultiplier);
+        _scoreMultiplier = 0;
+        _playerHUD.SetScoreMultiplierText(_scoreMultiplier);
     }
 }
