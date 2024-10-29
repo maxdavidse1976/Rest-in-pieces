@@ -7,8 +7,36 @@ public partial class Grave : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Check if the player is carrying a bodypart of the correct color
-        //if that is the case, collect the bodypart and remove it from the player
-        //if it isn't, do nothing or display a message that this is the wrong color bodypart
+        if (collision.TryGetComponent(out BodyPart bodyPart))
+        {
+           HandleBodyPartCollision(bodyPart);
+        }
+    }
+
+    private void HandleBodyPartCollision(BodyPart bodyPart)
+    {
+        if (bodyPart.GetBodyPartColor() == _bodyPartColor)
+        {
+            CollectBodyPart(bodyPart);
+            return;
+        }
+
+        DisplayWrongBodyPartMessage();
+    }
+
+    private void DisplayWrongBodyPartMessage()
+    {
+
+    }
+
+    private void CollectBodyPart(BodyPart bodyPart)
+    {
+        PlayerCharacter owningPlayer = bodyPart.GetCurrentItemHolder();
+        if (owningPlayer)
+        {
+            owningPlayer.AddScore(bodyPart.GetScoreValue());
+        }
+        _bodyParts++;
+        bodyPart.DestroyBodyPart();
     }
 }

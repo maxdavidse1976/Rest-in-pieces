@@ -1,13 +1,24 @@
 using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class PickUpAble : MonoBehaviour
 {
     [SerializeField] protected GameObject pickupUI;
-    public event Action OnItemDropSuccess;
+    [CanBeNull] private PlayerCharacter currentItemHolder;
+    public event Action OnItemDrop;
     public event Action OnItemDropFailed;
-    public virtual void PickUp(Transform parent, Vector3 pickupPosition)
+
+    public PlayerCharacter GetCurrentItemHolder() => currentItemHolder;
+
+    protected virtual void Awake()
     {
+        OnItemDrop += () => currentItemHolder = null;
+    }
+
+    public virtual void PickUp(PlayerCharacter player,Transform parent, Vector3 pickupPosition)
+    {
+        currentItemHolder = player;
         transform.SetParent(parent);
         transform.position = pickupPosition;
     }
@@ -25,7 +36,7 @@ public class PickUpAble : MonoBehaviour
     protected virtual void Drop()
     {
         transform.SetParent(null);
-        OnItemDropSuccess?.Invoke();
+        OnItemDrop?.Invoke();
     }
 
     protected virtual bool AreDropCircumstancesValid()
