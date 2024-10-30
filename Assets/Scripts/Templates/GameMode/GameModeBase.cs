@@ -23,6 +23,7 @@ public class GameModeBase<T> : GameMode<T> where T : MonoBehaviour
     }
     public override void StartGame()
     {
+        SpawnPlayer();
         SetIsGameRunning(true);
     }
 
