@@ -29,6 +29,7 @@ public class GameModeBase<T> : GameMode<T> where T : MonoBehaviour
 
     public override void EndGame()
     {
+        Time.timeScale = 0;
         SetIsGameRunning(false);
     }
 

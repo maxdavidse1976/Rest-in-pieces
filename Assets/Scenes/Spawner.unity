@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bodyParts: []
-  _spawnArea: {fileID: 0}
+  _spawnArea: {fileID: 1331298461}
 --- !u!4 &1331298463
 Transform:
   m_ObjectHideFlags: 0

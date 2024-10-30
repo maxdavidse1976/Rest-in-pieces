@@ -4,7 +4,6 @@ public class PlayerCharacter : Character
 {
     [SerializeField] PlayerHUD _playerHUD;
     [SerializeField] int _score;
-    [SerializeField] float _timeLeft;
     [SerializeField] int _scoreMultiplier;
 
     void Start()
@@ -12,10 +11,22 @@ public class PlayerCharacter : Character
         SetupCharacter();
     }
 
+    void Update()
+    {
+        UpdateTimeLeftText();
+    }
+
+    void UpdateTimeLeftText()
+    {
+        if (BodyPartCollectionGameMode.I.GetIsGameRunning())
+        {
+            _playerHUD.SetTimeLeftText(BodyPartCollectionGameMode.I.GetTimeLeftInGame());
+        }
+    }
+
     protected override void SetupCharacter()
     {
         _playerHUD.SetScoreText(_score);
-        _playerHUD.SetTimeLeftText(_timeLeft);
         _playerHUD.SetScoreMultiplierText(_scoreMultiplier);
     }
 
