@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BodyPartCollectionGameMode : GameModeBase<BodyPartCollectionGameMode>
 {
-    private float timeLeftInTheGame;
+    [SerializeReference] private float timeLeftInTheGame;
 
     private void Start()
     {
