@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  playerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 7574808503437735271, guid: 90ae9f4d02fd3f74abb490ba02b75a68, type: 3}
   spawnedPlayers: []
   playerSpawnPoint: {fileID: 4219937575699392407}
 --- !u!1 &4007647908537017019
