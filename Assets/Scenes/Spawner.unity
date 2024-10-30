@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 7574808503437735271, guid: 90ae9f4d02fd3f74abb490ba02b75a68, type: 3}
+    - target: {fileID: 2127461305967970087, guid: 97eeadedc9ae54e99a93eb1aa0d257f6, type: 3}
+      propertyPath: timeLeftInTheGame
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3863494409593108008, guid: 97eeadedc9ae54e99a93eb1aa0d257f6, type: 3}
       propertyPath: m_Name
       value: GameMode
@@ -801,7 +805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a661d516e2b74f1ca9a232d3ced453c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   _bodyParts:
   - {fileID: -4832692062652402333, guid: b688ba690a6b57149a290fedcbe9ae2b, type: 3}
   - {fileID: -4629130161403881248, guid: cc22eea8fdc42e14ea3875ce6f914ca9, type: 3}
@@ -811,11 +814,6 @@ MonoBehaviour:
   - {fileID: -5561746576064698941, guid: 58e929dee72221242a79a8f8af2de881, type: 3}
   - {fileID: -8063942948769041977, guid: 7dc6a40b376376744950fa2d9a290119, type: 3}
   _spawnArea: {fileID: 1331298461}
-  _spawnRate: 0.1
-=======
-  _bodyParts: []
-  _spawnArea: {fileID: 1331298461}
->>>>>>> e75822241f26651aca998214a1ed07da567078e9
 --- !u!4 &1331298463
 Transform:
   m_ObjectHideFlags: 0
