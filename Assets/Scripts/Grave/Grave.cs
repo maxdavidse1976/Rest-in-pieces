@@ -5,7 +5,7 @@ public partial class Grave : MonoBehaviour
     [SerializeField] int _bodyParts = 0;
     [SerializeField] BodyPartColor _bodyPartColor;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out BodyPart bodyPart))
         {
@@ -13,7 +13,7 @@ public partial class Grave : MonoBehaviour
         }
     }
 
-    private void HandleBodyPartCollision(BodyPart bodyPart)
+    void HandleBodyPartCollision(BodyPart bodyPart)
     {
         if (bodyPart.GetBodyPartColor() == _bodyPartColor)
         {
@@ -24,12 +24,12 @@ public partial class Grave : MonoBehaviour
         DisplayWrongBodyPartMessage();
     }
 
-    private void DisplayWrongBodyPartMessage()
+    void DisplayWrongBodyPartMessage()
     {
 
     }
 
-    private void CollectBodyPart(BodyPart bodyPart)
+    void CollectBodyPart(BodyPart bodyPart)
     {
         PlayerCharacter owningPlayer = bodyPart.GetCurrentItemHolder();
         if (owningPlayer)

@@ -97,6 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1088867503264816398}
   - component: {fileID: 2537098463437865385}
+  - component: {fileID: -8155641819043220629}
   m_Layer: 0
   m_Name: Orange bones torso
   m_TagString: Untagged
@@ -175,3 +176,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8155641819043220629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578767733155784739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d08dc882ed9e48029ffadecaf8d21d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupUI: {fileID: 0}
+  _bodyPartColor: 1
+  _scoreValue: 10

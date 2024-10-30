@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6215922138258429555}
   - component: {fileID: 5348771502037239357}
+  - component: {fileID: -5535707717324179425}
   m_Layer: 0
   m_Name: Purple bones head
   m_TagString: Untagged
@@ -88,6 +89,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5535707717324179425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288968193484528207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d08dc882ed9e48029ffadecaf8d21d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupUI: {fileID: 0}
+  _bodyPartColor: 3
+  _scoreValue: 10
 --- !u!1 &6811009906893100545
 GameObject:
   m_ObjectHideFlags: 0

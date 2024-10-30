@@ -97,6 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7835223873658492444}
   - component: {fileID: 5096135280241528691}
+  - component: {fileID: 5971696401917960515}
   m_Layer: 0
   m_Name: Green bones right arm
   m_TagString: Untagged
@@ -175,3 +176,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5971696401917960515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9183567967904249674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d08dc882ed9e48029ffadecaf8d21d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupUI: {fileID: 0}
+  _bodyPartColor: 0
+  _scoreValue: 10

@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class BodyPart : PickUpAble
 {
-    private Grave.BodyPartColor bodyPartColor;
-    [SerializeField] private int scoreValue;
+    [SerializeField] Grave.BodyPartColor _bodyPartColor;
+    [SerializeField] int _scoreValue;
+    
     public int GetScoreValue()
     {
-        return scoreValue;
+        return _scoreValue;
     }
     public Grave.BodyPartColor GetBodyPartColor()
     {
-        return bodyPartColor;
+        return _bodyPartColor;
     }
 
     public void DestroyBodyPart()
