@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 7574808503437735271, guid: 90ae9f4d02fd3f74abb490ba02b75a68, type: 3}
+    - target: {fileID: 2127461305967970087, guid: 97eeadedc9ae54e99a93eb1aa0d257f6, type: 3}
+      propertyPath: timeLeftInTheGame
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3863494409593108008, guid: 97eeadedc9ae54e99a93eb1aa0d257f6, type: 3}
       propertyPath: m_Name
       value: GameMode
